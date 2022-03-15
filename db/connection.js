@@ -1,5 +1,4 @@
 const mysql = require("mysql2");
-const util = require('util');
 
 //DB connection
 const connection = mysql.createConnection({
@@ -9,7 +8,7 @@ const connection = mysql.createConnection({
   database: "directory_db",
 });
 
-connection.query = util.promisify( connection.query );
+
 
 connection.connect(function (err) {
   if (err) {
